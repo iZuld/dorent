@@ -50,14 +50,18 @@ html{
 #login{
     background-color: rgb(208, 173, 240);
     color: white;  
-    padding: 5px; 
+    padding: 5px;
+    border-top-left-radius: 10px;
+    opacity: 0.9;
 }
 
 #sign_up{
     color: blueviolet;
     background-color: white;
     margin-top: 0;
-    padding: 5px; 
+    padding: 5px;
+    border-top-right-radius: 10px; 
+    opacity: 0.9;
 }
 
 .input_border{
@@ -67,10 +71,14 @@ html{
 
 #submit{
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 .form, .form-grup{
     background-color: rgb(208, 173, 240);
     margin-bottom: 0;
-    padding: 5px; 
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 0.9;
 }
