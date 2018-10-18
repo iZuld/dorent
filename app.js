@@ -1,11 +1,6 @@
-const express = require('express');
 const bodyParser = require('body-parser');
 const pagination = require('express-pagination');
 const expressMongoDB = require('express-mongo-db');
-const logger = require('morgan');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-
 
 var createError = require('http-errors');
 var express = require('express');
@@ -26,7 +21,6 @@ app.use(expressMongoDB());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-
 
 
 
