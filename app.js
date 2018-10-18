@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const pagination = require('express-pagination');
 const expressMongoDB = require('express-mongo-db');
 
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -21,7 +22,6 @@ app.use(expressMongoDB());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-
 
 
 app.use(logger('dev'));
@@ -59,9 +59,10 @@ var rentaldb = mongoose.model('rental', userSchema);
 module.exports = rentaldb;
 //module.exports = user;
 
-if(req.bodyParser.email &&
-    req.bodyParser.rentalname &&
-    req.bodyParser.password){
+app.use(function(req, res, next){
+    if(req.body.email &&
+        req.body.rentalname &&
+        req.body.password){
 
         var userRental = {
             email:req.bodyParser.email,
@@ -69,6 +70,7 @@ if(req.bodyParser.email &&
             password : req.bodyParser.password
         }
 
+        //buat schema
         rentaldb.create(userRental,function(err, user){
             if (err) {
                 return next(err)
@@ -77,6 +79,8 @@ if(req.bodyParser.email &&
             }
         })
     }
+})
+
 
 
 
