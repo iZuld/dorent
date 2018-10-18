@@ -1,4 +1,4 @@
-const bodyParser = require('body-parser');
+/*const bodyParser = require('body-parser');
 
 
 var mongoose = require ('mongoose');
@@ -42,3 +42,4 @@ if(req.bodyParser.email &&
             }
         })
     }
+*/
